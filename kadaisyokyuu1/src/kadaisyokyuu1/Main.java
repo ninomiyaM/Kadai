@@ -16,38 +16,20 @@ public class Main {
 	 */
 	public static void main(String[] args) throws Exception{
 		// TODO 自動生成されたメソッド・スタブ
-			String str1 = "2";
-			String str2 = "ando,noda";
-			String str3 = "2";
-			String str4 = "ando 1000";
-			String str5 = "noda 500";
-			String[] str = {str4,str5};
-			int A = 0;
-			int B = 0;
-			int N = Integer.parseInt(str1);
-			int M = Integer.parseInt(str3);
+			Scanner sc = new Scanner(System.in);
+			int N = sc.nextInt();  //社員数
+			String str = sc.nextLine(); //社員名
+			int M = sc.nextInt(); //購入冊数
+			String[] str1 = new String[M]; //購入者と購入金額
 			
-			Scanner sc = new Scanner (System.in);
-			//int N = sc.nextInt();
-			for (int i = 0; i < M; i++) {
-				String s = sc.next();
-				String[] array = s.split(",");
-				
-				for (int a = 4; a <= 5; a++) {
-					switch (str[a]) {
-					case("ando"): //andoの時
-						
-						break;
-					case("noda"): //nodaの時
-						
-						break;
-					}
-				if (A > B) {
-					System.out.println(str[a]);
-					
-				}
-				}
+			String[] name = new String[100];
+			name = str.split(" "); //社員名格納
+			
+			int[] total = new int[N]; //合計購入金額
+			
+			for (int i = 0; i <= M; i++) {
+				String input = sc.nextLine();
+				 str1 = input.split(" ");
 			}
-			
 	}
 }
