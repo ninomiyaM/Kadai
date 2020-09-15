@@ -40,7 +40,7 @@ public class Main {
 						amount[s] += Integer.parseInt(tmpArray[1]); //合計金額に加算
 					}
 				}
-				
+			}	
 			for ( int j = 0; j < N; j++) {
 				int max = total[j]; //最大値仮置き
 				int maxIndex = j;
@@ -57,7 +57,6 @@ public class Main {
 				total[j] = max; 
 				name[maxIndex] = name[j];
 				name[j] = maxname;
-				}
 			}
 			System.out.println(Arrays.toString(name));
 	}
