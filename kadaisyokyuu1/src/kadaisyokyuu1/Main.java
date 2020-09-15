@@ -23,20 +23,21 @@ public class Main {
 			String str = sc.nextLine(); //社員名
 			int M = sc.nextInt(); //購入冊数
 			sc.nextLine();
-			String[] str1 = new String[M]; //購入者と購入金額
+			String[] name = new String[N];
+			int[] amount = new int[N];
 			
-			String[] name = new String[100];
 			name = str.split(" "); //社員名格納
-			
 			int[] total = new int[N]; //合計購入金額
+			
+			String[] name1 = new String[N];
 			
 			for (int i = 0; i <= M; i++) {
 				String input = sc.nextLine();
-				str1 = input.split(" "); //入力値用一時
+				String[] tmpArray = input.split(" "); //入力値用一時
 				
-				for (i = 0; i < name.length; i++) {
-					if( str1[0].equals(name[i])) { //比較
-						total[i] += Integer.parseInt(str1[1]); //合計金額に加算
+				for (int s = 0; s < name.length; s++) {
+					if( tmpArray[0].equals(name[s])) { //比較
+						amount[s] += Integer.parseInt(tmpArray[1]); //合計金額に加算
 					}
 				}
 				
@@ -57,7 +58,7 @@ public class Main {
 				name[maxIndex] = name[j];
 				name[j] = maxname;
 				}
-			System.out.println(name);
-		}
+			}
+			System.out.println(Arrays.toString(name));
 	}
 }
