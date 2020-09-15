@@ -16,6 +16,7 @@ public class Main {
 	 */
 	public static void main(String[] args) throws Exception{
 		// TODO 自動生成されたメソッド・スタブ
+		
 			Scanner sc = new Scanner(System.in);
 			int N = sc.nextInt();  //社員数
 			String str = sc.nextLine(); //社員名
@@ -29,7 +30,32 @@ public class Main {
 			
 			for (int i = 0; i <= M; i++) {
 				String input = sc.nextLine();
-				 str1 = input.split(" ");
-			}
+				String[] tmpArray = input.split(" "); //入力値用一時
+				
+				for (i = 0; i < name.length; i++) {
+					if( tmpArray[0].equals(name[i])) { //比較
+						total[i] += Integer.parseInt(tmpArray[1]); //合計金額に加算
+					}
+				}
+				
+			for ( int j = 0; j < N; j++) {
+				int max = total[j]; //最大値仮置き
+				int maxIndex = j;
+				String maxname = name[j];
+				
+				for ( int t = j + 1; t < N; t++) {
+					if ( total[t] > max) { //最大値と比較
+						max = total[t];
+						maxIndex = t;
+						maxname = name[t];
+					}
+				}
+				total[maxIndex] = total[j]; //値入れ替え
+				total[j] = max; 
+				name[maxIndex] = name[j];
+				name[j] = maxname;
+				}
+			System.out.println(name);
+		}
 	}
 }
