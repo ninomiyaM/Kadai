@@ -24,12 +24,9 @@ public class Main {
 			int M = sc.nextInt(); //購入冊数
 			sc.nextLine();
 			String[] name = new String[N];
-			int[] amount = new int[N];
 			
 			name = str.split(" "); //社員名格納
 			int[] total = new int[N]; //合計購入金額
-			
-			String[] name1 = new String[N];
 			
 			for (int i = 0; i <= M; i++) {
 				String input = sc.nextLine();
@@ -37,7 +34,7 @@ public class Main {
 				
 				for (int s = 0; s < name.length; s++) {
 					if( tmpArray[0].equals(name[s])) { //比較
-						amount[s] += Integer.parseInt(tmpArray[1]); //合計金額に加算
+						total[s] += Integer.parseInt(tmpArray[1]); //合計金額に加算
 					}
 				}
 			}	
@@ -58,6 +55,8 @@ public class Main {
 				name[maxIndex] = name[j];
 				name[j] = maxname;
 			}
-			System.out.println(Arrays.toString(name));
+			for ( int k = 0; k < name.length; k++) {
+			System.out.println(name[k]);
+			}
 	}
 }
