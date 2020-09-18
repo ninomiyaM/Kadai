@@ -26,11 +26,13 @@ public class Main {
 			list.stream()
 				.filter(a -> (list).startsWith(n))
 				.collect(s.toList);
+			
+			
 			}
 			
 		}	
 			
 		
-	}
-
 }
+
+
