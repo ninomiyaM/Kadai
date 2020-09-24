@@ -11,32 +11,29 @@ public class Main {
 		// TODO 自動生成されたメソッド・スタブ
 		Scanner sc = new Scanner(System.in);
 		String n = sc.nextLine(); //嫌いな数字
-		sc.nextLine();
 		String m = sc.nextLine(); //部屋数
-		sc.nextLine();
 		List<String> list = new ArrayList<String>();
 		List<String> s = new ArrayList<String>();
 		while (sc.hasNext()) {
 			list.add(sc.nextLine());
 		}
 		
-			int m1 = Integer.parseInt(m); //部屋数を数値化
-			String r = sc.nextLine(); //部屋番号
-			
-			for (int i = 0; i <= m1; i++) {
+			//int m1 = Integer.parseInt(m); //部屋数を数値化
+			//String r = sc.nextLine(); //部屋番号
 				
-				
+			List<String> o =	
 				list.stream()
-					.filter(( a -> list.contains(n)))
+					.filter( a  ->! a.contains(n))
 					.collect(Collectors.toList());
-			
-					
-			
+				
+				if(o.size() == 0) {
+					System.out.println("none");	
+				}else{
+					for(String k : o) {
+						System.out.println(k);
+					}
 			}
-			
 		}	
-			
-		
 }
 
 
