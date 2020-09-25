@@ -13,12 +13,14 @@ public class Main {
 		String n = sc.nextLine(); //嫌いな数字
 		String m = sc.nextLine(); //部屋数
 		List<String> list = new ArrayList<String>();
-		List<String> s = new ArrayList<String>();
-		while (sc.hasNext()) {
+		//List<String> s = new ArrayList<String>();
+		int m1 = Integer.parseInt(m); //部屋数を数値化
+		//String r = sc.nextLine(); //部屋番号
+		for (int i = 0; i <= m1; i++) {
 			list.add(sc.nextLine());
 		}
-		
-			//int m1 = Integer.parseInt(m); //部屋数を数値化
+		sc.close();
+			
 			//String r = sc.nextLine(); //部屋番号
 				
 			List<String> o =	
@@ -27,13 +29,11 @@ public class Main {
 					.collect(Collectors.toList());
 				
 				if(o.size() == 0) {
-					System.out.println("none");	
-				}else{
-					for(String k : o) {
-						System.out.println(k);
-					}
+					System.out.println("none");
+				} else{
+				for(String k : o) {
+					System.out.println(k);
+				}
 			}
-		}	
+	}
 }
-
-
