@@ -10,28 +10,26 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		Scanner sc = new Scanner(System.in);
-		String n = sc.nextLine(); //嫌いな数字
-		String m = sc.nextLine(); //部屋数
+		String kirai = sc.nextLine(); //嫌いな数字
+		String room = sc.nextLine(); //部屋数
 		List<String> list = new ArrayList<String>();
-		//List<String> s = new ArrayList<String>();
-		int m1 = Integer.parseInt(m); //部屋数を数値化
+
+		int roomnum = Integer.parseInt(room); //部屋数を数値化
 		//String r = sc.nextLine(); //部屋番号
-		for (int i = 0; i <= m1; i++) {
+		for (int i = 0; i < roomnum; i++) {
 			list.add(sc.nextLine());
 		}
 		sc.close();
-			
-			//String r = sc.nextLine(); //部屋番号
 				
-			List<String> o =	
+			List<String> kibou =	//希望する部屋
 				list.stream()
-					.filter( a  ->! a.contains(n))
+					.filter( a  -> !a.contains(kirai))
 					.collect(Collectors.toList());
 				
-				if(o.size() == 0) {
+				if(kibou.isEmpty()) {
 					System.out.println("none");
 				} else{
-				for(String k : o) {
+				for(String k : kibou) {
 					System.out.println(k);
 				}
 			}
