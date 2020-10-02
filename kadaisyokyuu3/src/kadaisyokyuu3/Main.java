@@ -45,9 +45,10 @@ public class Main {
 			
 			
 		}	
-		int start = minIndex + 1;
-		int end = start + Nnum -1;
-		int[] startend = new int[2];
+		String start = dateStr[minIndex];
+		int startnum = Integer.parseInt(start);
+		String end = dateStr[startnum + Nnum -1];
+		String[] startend = new String[2];
 		startend[0] = start;
 		startend[1] = end;
 		for (int o = 0; o < startend.length; o++) {
