@@ -12,28 +12,46 @@ public class Main {
 		String[] Array =day.split(" ");
 		String M = Array[0]; //休日数
 		String N = Array[1]; //旅行日数
+		
 		int Nnum = Integer.parseInt(N);
 		int Mnum = Integer.parseInt(M);
 		int  Onum = Mnum - ( Nnum -1);
+		String dateStr[] = new String[Mnum];
+		int rainFallPc[] = new int[Mnum];
 		int[] total = new int[Onum];
 		int min = 0;
 		int minIndex = 0;
 		int[] avg = new int[Onum];
-		for (int i = 0; i < Onum; i++ ) {
+		
+		for(int i = 0; i < Mnum; i++) {
+			String input = sc.nextLine();
+			String[] tmpArray = input.split(" ");
+			dateStr[i] = tmpArray[0];
+			rainFallPc[i] = Integer.parseInt(tmpArray[1]);
+		}
+		
+		for (int k = 0; k < Onum; k++ ) {
 			for(int j = 0 ; j < Nnum; j++) {
 				
-				String input = sc.nextLine();
-				String[] tmpArray = input.split(" ");
-				total[i] += Integer.parseInt(tmpArray[1]);//合計値
-				avg[i] = total[i]/Nnum;//平均
+				total[k] += rainFallPc[k];//合計値
+				avg[k] = total[k]/Nnum;//平均
 				min = avg[0];//最小値仮置き				
 			}
-
-			if(avg[i] < min) {	
-				min = avg[i];
-				minIndex = i;
+			
+				if(avg[k] < min) {	
+				min = avg[k];
+				minIndex = k;
 			}
-			System.out.println(minIndex);//仮出力
+			
+			
 		}	
+		int start = minIndex + 1;
+		int end = start + Nnum -1;
+		int[] startend = new int[2];
+		startend[0] = start;
+		startend[1] = end;
+		for (int o = 0; o < startend.length; o++) {
+			System.out.println(startend[o]);//仮出力
+		}
 	}
 }
