@@ -45,9 +45,8 @@ public class Main {
 			
 			
 		}	
-		String start = dateStr[minIndex];
-		int startnum = Integer.parseInt(start);
-		String end = dateStr[startnum + Nnum -1];
+		String start = dateStr[minIndex]; //最小確率開始日
+		String end = dateStr[minIndex + Nnum -1];//最小確率終了日
 		String[] startend = new String[2];
 		startend[0] = start;
 		startend[1] = end;
