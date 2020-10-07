@@ -31,9 +31,9 @@ public class Main {
 		}
 		
 		for (int k = 0; k < Onum; k++ ) {
-			for(int j = 0 ; j < Nnum; j++) {
+			for(int j = k ; j < k+Nnum; j++) {
 				
-				total[k] += rainFallPc[k];//合計値
+				total[k] += rainFallPc[j];//合計値
 				avg[k] = total[k]/Nnum;//平均
 				min = avg[0];//最小値仮置き				
 			}
@@ -51,7 +51,8 @@ public class Main {
 		startend[0] = start;
 		startend[1] = end;
 		for (int o = 0; o < startend.length; o++) {
-			System.out.println(startend[o]);//仮出力
+			System.out.print(startend[o] + " ");//仮出力
 		}
+
 	}
 }
