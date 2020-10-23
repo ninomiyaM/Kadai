@@ -7,12 +7,12 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		String N = sc.nextLine();//���V�[�g��
+		String N = sc.nextLine();//レシート数
 		int Nnum = Integer.parseInt(N);
-		double pt = 0;
-		int point = 0;
-		int totalPoint = 0;
-		int totalMoney = 0;
+		double pt = 0;//仮置きポイント
+		int point = 0; //型変換後ポイント
+		int totalPoint = 0;//合計ポイント
+		int totalMoney = 0;//合計金額
 
 		
 		for(int i = 0; i < Nnum; i++) {
@@ -38,10 +38,9 @@ public class Main {
 			totalMoney += payN;
 			
 		}
-		System.out.println(totalMoney + "�~");
-		System.out.println(totalPoint + "�|�C���g");
 		
-
-		
+		System.out.println(totalMoney + "回");
+		System.out.println(totalPoint + "ポイント");
+			
 	}
 }
