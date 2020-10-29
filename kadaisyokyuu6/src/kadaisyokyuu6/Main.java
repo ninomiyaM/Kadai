@@ -41,7 +41,7 @@ public class Main {
 			}
 		}
 		for (int j = 0; j < Nafter.length; j++) {
-		System.out.print(Nafter[j]);
+			System.out.print(Nafter[j]);
 		}	
 	}
 }
